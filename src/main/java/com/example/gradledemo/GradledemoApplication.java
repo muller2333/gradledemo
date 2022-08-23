@@ -3,8 +3,6 @@ package com.example.gradledemo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import java.math.BigInteger;
-
 @SpringBootApplication
 public class GradledemoApplication {
     public static void main(String[] args) {

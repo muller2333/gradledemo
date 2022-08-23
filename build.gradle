@@ -14,9 +14,35 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.24'
-    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-jdbc', version: '2.7.1'
 }
 
 tasks.named('test') {
     useJUnitPlatform()
+}
+
+task task1 {
+    println "这是任务1"
+
+    doFirst {
+        println "doFirst"
+    }
+
+    doLast {
+        println "doLast"
+    }
+}
+
+task task2(dependsOn: [task1]) {
+    println "这是任务2"
+    doFirst {
+        println "doFirst task2"
+    }
+
+    doLast {
+        println "doLast task2"
+    }
+}
+
+task camelName {
+    println "camelName"
 }

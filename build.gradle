@@ -45,4 +45,7 @@ task task2(dependsOn: [task1]) {
 
 task camelName {
     println "camelName"
+    doFirst {
+        println "camelName doFirst"
+    }
 }
